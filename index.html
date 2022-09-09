@@ -10,22 +10,50 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="wrap">
-      <img src="./images/bg-card-front.png" alt="bg-card-front">
-      <div class="content">
-          <img src="./images/card-logo.svg" alt="card-logo">
-          <h1>9591 6489 6389 101E</h1>
-        <div class="cardname">  
-          <p>FELICIA LEIRE</p>
-          <p>09/00</p>
+  <div class="main-container">
+    <div class="container">
+      <div class="wrap">
+        <img class="background" src="./images/bg-card-front.png" alt="bg-card-front">
+        <div class="content">
+            <img class="logo" src="./images/card-logo.svg" alt="card-logo">
+            <p class="num">9591 6489 6389 101E</p>
+          <div class="cardname">  
+            <p>FELICIA LEIRE</p>
+            <p>09/00</p>
+          </div>
+        </div>
+    </div>
+    <div class="content1">
+      <div class="wrap1">
+        <img class="back" src="./images/bg-card-back.png"/>
+        <div class="content1">
+            <p>000</p>
         </div>
       </div>
+    </div>
   </div>
-  <div class="wrap1">
-    <img src="./images/bg-card-back.png"/>
-    <div class="content1">
-        <p>000</p>
+  <div class="secondContainer">
+    <div class="form">
+      <p>Card Holder Name</p>
+      <input class="firstform" type="text" name="cardHolderName" id="1" required>
+      <p>Card Number</p>
+      <input type="number" name="cardName" id="2" required>
+      <div class="essentials">
+        <div class="sub1">
+          <p class="wire">Exp.Date (mm,yy)</p>
+        <div class="sub2">
+          <input type="text" name="month/year" inputmode="numeric" id="4" placeholder="YY" required>
+          <input type="text" name="expiry" id="3" inputmode="numeric" placeholder="MM" required>
+        </div>
+        </div>
+        <div class="sub sub3">
+          <p>cvc</p>
+          <input type="text" name="cvc" inputmode="numeric" id="5" placeholder="eg.123" required>
+        </div>
+      </div>
+      <button type="submit">
+        <h2>Confirm</h2>
+      </button>
     </div>
   </div>
 </div>
