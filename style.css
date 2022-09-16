@@ -4,138 +4,214 @@
     margin: 0;
     padding: 0;
 }
+.main-container{
+   margin: 0 auto;
+   font-family: 'Space Grotesk', sans-serif;
+
+}
 .container{
     background-image: url(./images/bg-main-mobile.png);
     background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 100% 80%;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: space-around;
-    padding: 20px;
     position: relative;
-    z-index: -4;
-    max-width: 100%;
-    height: auto;
+    padding: 1em 2em 0;
+    background-size: 100%;
+    color: white;
+    z-index: -3;
+}
+.wrap{
+    position: relative;
+    top: -4.3rem;
+    right: 2em;
 }
 .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    margin-left: 20px;
-    padding: 10px;
-    font-family: 'Space Grotesk', sans-serif;
-    color: white;
+    background-image: url(./images/bg-card-front.png);
+    background-size: 100%;
+    padding: 1rem 2rem 1em .9rem;
+    background-repeat: no-repeat;
+    margin-left: 1rem;
 }
-.wrap {
-    display: inline-block;
-    position: relative;
-    margin-right: 20%;
-    margin-top: -60px;
-    z-index: 0;
-}
-.wrap img + .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.content img{
-    width: 70px;
-    height: 40px;
+.num{
+    margin: 1em 0;
+    font-size: 1rem;
 }
 .cardname{
     display: flex;
-    width: 100%;
     justify-content: space-between;
-}
-.num{
-    font-size: large;
-}
-.wrap1 {
-    display: inline-block;
-    position: relative;
-    width: fit-content;
-    margin-left: 20%;
-    z-index: -1;
+    margin-bottom: 1rem;
 }
 .content1{
+    background-image: url(./images/bg-card-back.png);
+    background-size: 100%;
     position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    width: 100%;
+    left: 2em;
+    margin-right: 1em;
+    z-index: -1;
 }
-.content1 p{
- position: absolute;
- left:80%;
- height: fit-content;
- width: fit-content;
-}
-.wrap1 img + .content1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.wrap1 img + .content1 p{
-    color:white;
-}
-img{
-    max-width: 100%;
-    height: auto;
+.wrap1{
+    position: relative;
+    height: 10rem;
+}.wrap1 p{
+   padding-top: 25%;
+   text-align: end;
+   padding-right: 2.2rem;
 }
 .secondContainer{
-    font-family: 'Space Grotesk', sans-serif;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    text-transform: uppercase;
+    padding: 1em;
+    word-spacing: .5em;
+    position: relative;
+    top: -4em;
 }
 .form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-transform: uppercase;
-    max-width: 400px;
-    width: 100%;
-}
+    position: relative;
 
+}
+.complete{
+    text-align: center;
+    display: none;
+}
+.complete p{
+   color:hsl(279, 6%, 55%) ; 
+}
+.ym{
+    display: flex;
+}
+input{
+    font-size: 1rem;
+    border-color: hsl(270, 3%, 87%);
+}
+input,button{
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 7px;
+    outline: none;
+}
+button{
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+}
 .essentials{
     display: flex;
-    width: 100%;
-    max-width: 400px;
-    position: relative;
-}
-.sub1 p{
-    white-space: nowrap;
-}
-.sub1{
-    display: flex;
-    flex-direction: column;
 }
 .sub2{
     display: flex;
 }
+.sub1{
+    white-space: nowrap;
+}
 .sub2 input{
-    width: 100%;
-    margin-right: 10px;
+    width: 5em;
+    text-align: center;
+}
+.sub2 > input + input{
+    margin-left: .3em;
 }
 .sub3{
     display: flex;
     flex-direction: column;
-}
-.sub3 p{
     margin-left: 10px;
 }
- input, button{
-    padding: 15px;
-    border-radius: 10px;
-    margin: 10px 0 15px;
+#cardnumber{
+    margin-bottom: 10px;
 }
+.error{
+    word-spacing: 0;
+    text-transform: none;
+    font-size: 15px;
+    margin: 10px 0 15px;
+    color: red;
+}
+@media (min-width:25em) and (max-width:86em) {
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .secondContainer{
+        margin: 0 auto;
+    }
 
-button{
-    background-color: hsl(278, 68%, 11%);
-    color: white;
+}
+@media (min-width: 25em){
+    .main-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container{
+        background-image: url(./images/bg-main-desktop.png);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex: 1;
+        height: 100vh;
+        background-size: 50% 100%;
+    }
+    .wrap{
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 6.5em;
+    }
+    .content{
+        background-image: url(./images/bg-card-front.png);
+        padding: 1rem 2rem 1em .9rem;
+        width: 27.93em;
+        height: 15.3em;
+        border-radius: 7px;
+    }
+    .num{
+        margin: 1.5em 0 1.5em;
+        font-size: 2.1rem;
+    }
+    .cardname{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    .content1{
+        background-image: none;
+        top: -8em;
+
+    }
+    .wrap1 p{
+       background-image: url(./images/bg-card-back.png);
+       box-shadow: 10px 10px 100px -40px black;
+       padding-top: 7em;
+       padding-right: 2.7em;
+       text-align: end;
+       width: 27.93em;
+       height: 15.3em;
+       margin: 0 auto;
+    }
+    .secondContainer{
+        text-transform: uppercase;
+        padding: 1em;
+        word-spacing: .5em;
+        position: relative;
+        top: 0;
+        flex: 1;
+        height: 100vh;
+    }
+    .form{
+        width: 400px;
+        margin-top: 20%;
+    }
+    .complete{
+        width: 400px;
+        margin-top: 20%;
+    }
+    .complete  * + *{
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .complete button{
+        margin-top: 4em;
+    }
+    .ym{
+        display: flex;
+    }
 }
